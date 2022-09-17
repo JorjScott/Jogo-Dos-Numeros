@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <title>Pagina Inicial</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+body{
+    background-color: #DAA520;
+}
+p {
+    margin-left: 25%;
+    width: 50%;
+}
+    h1 {
+    margin-left: 25%;
+    width: 50%;
+}
+img {
+    margin-left: 25%;
+    margin-top: 1%;
+    width: 50%;
+}
+.conteudo{
+    padding-top: 80px;
+}
+
+.btn{
+    margin-left: 90%;
+    margin: 20px;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Jogo Advinhe um numero</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Jogo Advinhe um Numero</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Pagina Inicial</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="jogodosnumeros.html">Jogue Agora!</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Outros
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="comojogar.html">Como Jogar?</a></li>
+                    <li><a class="dropdown-item" href="https://twitter.com/flavinhaverso/status/1570930231195860993">NÃO CLIQUE AQUI! É SERIO!</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="https://twitter.com/FelipecomF2/status/1567724629816475650">Mascote dos Desenvolvedores</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+<div class="conteudo">
+    <h1>Trabalho de Programação Web do Professor José Roberto</h1>
+    <p>Nesse Web site temos um jogo de adivinhar numeros, segue
+        no menu acima temos a pagina inicial, as instruções onde podemos entender como o jogo funciona e como jogar e a pagina do jogo, esse é o local onde podemos jogar
+    </p>
+<img src="detetive.jpg" alt="jpg">
+</div>
+<button type="button" class="btn btn-primary" id="liveToastBtn">Dinheiro Rapido aqui!</button>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="http://conteudo.imguol.com.br/c/noticias/20/2022/07/09/urubu-do-pix-e-novo-golpe-na-praca-1657379024808_v2_720x722.jpg" class="rounded me-2" alt="jpg">
+      <strong class="me-auto">Ganhe dinheiro rapido</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+     Urubu do pix, ofertas imperdiveis
+    </div>
+  </div>
+</div>
+
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Desenvolvedores
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Desenvolvedores</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       Projeto desenvolvido por Jorge Luiz P5 de Informática
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+    const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+if (toastTrigger) {
+  toastTrigger.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExample)
+
+    toast.show()
+  })
+}
+</script>
+</html>
